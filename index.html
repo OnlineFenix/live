@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Unavailable</title>
-    </head>
-    <body>
-        To be updated
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>live check</title>
+</head>
+<body>
+  <h1 id="change">CHANGE ME</h1>
+  <div>
+    <h3>Login Page</h3>
+    <input type="text" id="userid">
+    <input type="password" id="pass">
+    <button type="submit" onclick="fnxs()">login</button>
+  </div>
+  <div id="maindiv" style="display: none;">
+  
+  <input type="text" id="input">
+  <button type="submit" onclick="fnx()">Submit</button>
+  </div>
+  <script>
+    function fnx() {
+      a = document.getElementById("input").value;
+      b = document.getElementById("change");
+      b.innerHTML= a;
+    }
+    function fnxs() {
+      x = document.getElementById("userid").value;
+      y = document.getElementById("pass").value;
+      z = document.getElementById("maindiv");
+      if (x=="fenix" && y=="fnxs"){
+        z.style.display= "block";
+      }
+      else {
+        z.style.display= "none";
+      }
+      
+    }
+  </script>
+</body>
 </html>
