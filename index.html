@@ -1,42 +1,105 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>live check</title>
-</head>
-<body>
-  <h1 id="change">CHANGE ME</h1>
-  <div>
-    <h3>Login Page</h3>
-    <input type="text" id="userid">
-    <input type="password" id="pass">
-    <button type="submit" onclick="fnxs()">login</button>
-  </div>
-  <div id="maindiv" style="display: none;">
-  
-  <input type="text" id="input">
-  <button type="submit" onclick="fnx()">Submit</button>
-  </div>
-  <script>
-    function fnx() {
-      a = document.getElementById("input").value;
-      b = document.getElementById("change").value;
-      b.value= a.value;
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
     }
-    function fnxs() {
-      x = document.getElementById("userid").value;
-      y = document.getElementById("pass").value;
-      z = document.getElementById("maindiv");
-      if (x=="fenix" && y=="fnxs"){
-        z.style.display= "block";
-      }
-      else {
-        z.style.display= "none";
-      }
+    body {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: black;
       
     }
+    .container, .box {
+      border: 2px solid red;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      
+    }
+    .container {
+      height: 100vh;
+      width: 100vw;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .h1 {
+      color: red;
+      text-shadow: 0px 0px 2px black;
+      font-size: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid ghostwhite;
+      margin: 20px;
+      background-color: cyan;
+    }
+    .admin {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h1 class="h1" id="h1">CHANGE</h1>
+    </div>
+    <div class="admin">
+      <input type="text" id="username">
+      <input type="password" id="pass">
+      <button id="btn" onclick="login()">Submit</button>
+    </div>
+    <div id="panel" style="display: none;">
+      <input type="text" id="input-2">
+      <button id="btn-2" onclick="changer()">CHANGING</button>
+      </div>
+  </div>
+  
+  
+  <script>
+    function login() {
+      let a = document.getElementById("username").value;
+      let b = document.getElementById("pass").value;
+      let c = document.getElementById("panel");
+      
+      if(a=="fenix" && b=="fnx"){
+        c.style.display= "block";
+      }
+      else {
+        c.style.display = "none";
+      }
+      
+      
+      
+    }
+    
+    function changer() {
+      let x = document.getElementById("h1");
+      let y = document.getElementById("input-2").value;
+      x.innerHTML = y;
+    }
+    
   </script>
 </body>
 </html>
