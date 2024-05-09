@@ -37,28 +37,9 @@ var loginSection = document.getElementById('l-page');
     }
     
     
- // game changer-----
- // admin panel-----
-   function uploadGame() {
-     const newResult = document.getElementById('edit-result').value;
-   const newName = document.getElementById('edit-name').value;
-   document.getElementById('upname').innerHTML = newName;
-   document.getElementById('upresult').innerHTML = newResult;
-   
-   localStorage.setItem('text31', newName);
-   localStorage.setItem('text32', newResult);
-   }
-   // Check if text exists in local storage and display it
-   const savedText31 = localStorage.getItem('text31');
-   const savedText32 = localStorage.getItem('text32');
-   if (savedText31) {
-     document.getElementById('upname').innerText = savedText31;
-   }
-   if (savedText32) {
-     document.getElementById('upresult').innerText = savedText32;
-   }
-   
-//login function-----------
+ // game changer------
+ // admin panel-------
+ // login function----
 
 document.getElementById('submit').addEventListener('click', () => {
     const userName = document.getElementById('username').value;
