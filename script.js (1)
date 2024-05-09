@@ -1,0 +1,75 @@
+function updateClock() {
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    let day = now.getDay();
+    let date = now.getDate();
+    let year = now.getFullYear();
+    let ampm = hours >= 12 ? 'PM' : 'AM';
+    let month = now.getMonth() + 1;
+
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+
+    hours = hours < 10 ? `0${hours}` : hours;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+    seconds = seconds < 10 ? `0${seconds}` : seconds;
+    date = date < 10 ?
+      `0${date}` : date;
+
+    document.getElementById('clock').innerHTML = `${hours}:${minutes}:${seconds} ${ampm} - ${date} ${getMonthName(month)} ${year}`;
+}
+
+function getMonthName(month) {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    return months[month - 1];
+}
+
+setInterval(updateClock, 1); // Update every milisecond
+
+// loginPage Function----
+var loginSection = document.getElementById('l-page');
+    let logVisible = false;
+    function loginPage() {
+      logVisible = !logVisible;
+      loginSection.style.display = logVisible ? 'flex' : 'none';
+    }
+    
+    
+ // game changer-----
+ // admin panel-----
+   function uploadGame() {
+     const newResult = document.getElementById('edit-result').value;
+   const newName = document.getElementById('edit-name').value;
+   document.getElementById('upname').innerHTML = newName;
+   document.getElementById('upresult').innerHTML = newResult;
+   
+   localStorage.setItem('text31', newName);
+   localStorage.setItem('text32', newResult);
+   }
+   // Check if text exists in local storage and display it
+   const savedText31 = localStorage.getItem('text31');
+   const savedText32 = localStorage.getItem('text32');
+   if (savedText31) {
+     document.getElementById('upname').innerText = savedText31;
+   }
+   if (savedText32) {
+     document.getElementById('upresult').innerText = savedText32;
+   }
+   
+//login function-----------
+
+document.getElementById('submit').addEventListener('click', () => {
+    const userName = document.getElementById('username').value;
+    const userPassword = document.getElementById('password').value;
+    
+    if(userName=="f" && userPassword=="f"){
+      document.getElementById('editor-panel').style.display= "flex";
+      document.getElementById('l-page').style.display = "none";
+    }
+    else {
+      alert("You Are Not a Admin!");
+    }
+});
+
