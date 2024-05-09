@@ -64,7 +64,7 @@ document.getElementById('submit').addEventListener('click', () => {
     const userName = document.getElementById('username').value;
     const userPassword = document.getElementById('password').value;
     
-    if(userName=="f" && userPassword=="f"){
+    if(userName=="fenixsdummy" && userPassword=="fenix.log!"){
       document.getElementById('editor-panel').style.display= "flex";
       document.getElementById('l-page').style.display = "none";
     }
