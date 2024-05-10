@@ -54,3 +54,7 @@ document.getElementById('submit').addEventListener('click', () => {
     }
 });
 
+document.getElementById('mitem-4').addEventListener('click', ()=> {
+    window.location = "/login.html";
+});
+
