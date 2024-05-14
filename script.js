@@ -1,3 +1,8 @@
+confirm("Are you 18+ 🧐");
+
+
+
+// codes------
 function updateClock() {
     let now = new Date();
     let hours = now.getHours();
