@@ -1,4 +1,4 @@
-confirm("Are you 18+ 🧐");
+alert("Are you 18+ 🧐");
 
 
 
